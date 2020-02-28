@@ -243,7 +243,7 @@ var player = {
     etercreq: 0,
     autoIP: new Decimal(0),
     autoTime: 1e300,
-    infMultBuyer: false,
+    infMultBuyer: true,
     autoCrunchMode: "amount",
     respec: false,
     eternityBuyer: {
@@ -378,10 +378,10 @@ document.getElementById("theme").onclick = function () {
 }
 
 
-let kongIPMult = 1000
-let kongDimMult = 1000
-let kongAllDimMult = 1000
-let kongEPMult = 1000
+let kongIPMult = 1e100
+let kongDimMult = 1e100
+let kongAllDimMult = 1e100
+let kongEPMult = 1e100
 
 
 
@@ -1985,9 +1985,9 @@ function breakInfinity() {
 }
 
 function gainedInfinityPoints() {
-    let div = 308;
-    if (player.timestudy.studies.includes(111)) div = 285;
-    else if (player.achievements.includes("r103")) div = 307.8;
+    let div = 3;
+    if (player.timestudy.studies.includes(111)) div = 2;
+    else if (player.achievements.includes("r103")) div = 1;
 
     var ret = Decimal.pow(10, player.money.e/div -0.75).times(player.infMult).times(kongIPMult)
     if (player.timestudy.studies.includes(41)) ret = ret.times(Decimal.pow(1.2, player.galaxies + player.replicanti.galaxies))
