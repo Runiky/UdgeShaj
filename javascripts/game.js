@@ -378,10 +378,10 @@ document.getElementById("theme").onclick = function () {
 }
 
 
-let kongIPMult = 1
-let kongDimMult = 1
-let kongAllDimMult = 1
-let kongEPMult = 1
+let kongIPMult = 1000
+let kongDimMult = 1000
+let kongAllDimMult = 1000
+let kongEPMult = 1000
 
 
 
